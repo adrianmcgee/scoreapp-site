@@ -4,10 +4,12 @@ Static HTML marketing + legal site for ScoreAU. Deployed via GitHub Pages. No bu
 
 ## Related repos (sibling absolute paths)
 
+- **Master Systems Manual**: `/Users/adrianmcgee/Developer/SYSTEMS_MANUAL.md`
 - **iOS app** (Swift, XcodeGen, Fastlane): `/Users/adrianmcgee/Developer/ScoreAU`
+- **Android app** (Kotlin, Compose): `/Users/adrianmcgee/Developer/ScoreAUAndroid`
 - **Backend** (Node/Express, Railway): `/Users/adrianmcgee/Developer/scoreapp-server`
 
-The app and backend link to pages here (privacy, terms, support, password-reset). If you change a path or filename, search both sibling repos for the URL before merging.
+The app and backend link to pages here (privacy, terms, support, password-reset). If you change a path or filename, search sibling repos for the URL before merging.
 
 ## Contents
 
