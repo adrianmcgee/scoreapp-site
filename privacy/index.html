@@ -75,16 +75,18 @@
     <header>
       <div class="logo">Scores AU</div>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective date: 1 May 2026 &nbsp;·&nbsp; Last updated: 3 August 2026</p>
+      <p class="meta">Effective date: 1 May 2026 &nbsp;·&nbsp; Last updated: 6 November 2026</p>
     </header>
 
     <div class="card">
       <p>Scores AU is built with privacy in mind. We collect only what's necessary to provide live sports scores, personalised alerts, and cross-device sync. We don't sell your data.</p>
     </div>
 
+    <p><a href="../delete-account/">Request deletion of your ScoreAU account and associated data</a></p>
+
     <h2>Who we are</h2>
     <p>Scores AU is operated by Adrian McGee ("<span class="highlight">we</span>", "<span class="highlight">us</span>", "<span class="highlight">our</span>"), based in Australia. You can reach us at <a href="mailto:scoreappau@gmail.com">scoreappau@gmail.com</a>.</p>
-    <p>This policy applies to the Scores AU iOS application and the backend services that power it. It is governed by the <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles.</p>
+    <p>This policy applies to the ScoreAU (Scores AU) iOS and Android applications and the backend services that power it. It is governed by the <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles.</p>
 
     <h2>What we collect</h2>
     <h2 style="font-size:1rem; margin-top:1.5rem;">Account information</h2>
@@ -105,14 +107,18 @@
     <p>These are stored on your device and, if you are signed in, synced to our server so they persist across reinstalls and devices.</p>
 
     <h2 style="font-size:1rem; margin-top:1.5rem;">Device tokens</h2>
-    <p>To deliver push notifications and Live Activity updates, we store your device's APNs (Apple Push Notification service) token on our server. This token is used only to send you notifications and is not shared with third parties for any other purpose.</p>
+    <p>To deliver notifications, we store an APNs token on iOS or a Firebase Cloud Messaging (FCM) registration token on Android, together with notification preferences. Android uses Firebase installation identifiers to route messages through Google. These identifiers support notification delivery and installation management; they are not used for advertising. You can turn match alerts off in Settings. Live Activities are available on iOS.</p>
 
     <h2 style="font-size:1rem; margin-top:1.5rem;">Usage analytics</h2>
-    <p>We use <a href="https://telemetrydeck.com" target="_blank">TelemetryDeck</a> for privacy-first analytics. TelemetryDeck does not collect personally identifiable information and processes events anonymously on their servers. Data collected includes: app launches, feature usage, tab selections, and crash-related signals. No advertising identifiers are used.</p>
+    <p>On iOS, we use <a href="https://telemetrydeck.com" target="_blank">TelemetryDeck</a> for privacy-first analytics. TelemetryDeck does not collect personally identifiable information and processes events anonymously on their servers. Data collected includes: app launches, feature usage, tab selections, and crash-related signals. No advertising identifiers are used.</p>
     <p>To improve Top Stories, our server counts news impressions and article opens using a device value that is pseudonymised and rotated daily. Raw records used to prevent duplicate counts are deleted after 24 hours; only aggregate story counts are retained. We do not create or retain an account-level reading history.</p>
 
+    <p>Google Analytics collection is disabled in the Android app. This does not disable essential notification delivery or release crash diagnostics.</p>
+
     <h2 style="font-size:1rem; margin-top:1.5rem;">Crash reports</h2>
-    <p>We use <a href="https://sentry.io" target="_blank">Sentry</a> to receive automatic crash reports. Crash reports may contain device information (OS version, device model) and a stack trace of the error. They do not contain your account details or the content of your notifications.</p>
+    <p>On iOS, we use <a href="https://sentry.io" target="_blank">Sentry</a> to receive automatic crash reports. Crash reports may contain device information (OS version, device model) and a stack trace of the error. They do not contain your account details or the content of your notifications.</p>
+
+    <p>On Android release builds, we use Google Firebase Crashlytics for crash diagnostics, including stack traces, installation identifiers, app version and device/operating-system information. We do not attach account email addresses or account IDs to Crashlytics reports. Google describes its processing and retention in <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</p>
 
     <h2>How we use your information</h2>
     <ul>
@@ -134,7 +140,7 @@
       <li>API-Football / The Odds API (A-League, supplementary data)</li>
     </ul>
     <p>Sign-in is processed by Apple (Sign in with Apple) and Google (Google Sign-In). Please refer to their respective privacy policies for how they handle authentication.</p>
-    <p>Subscriptions are managed entirely by Apple through the App Store. We do not receive or store your payment details.</p>
+    <p>iOS subscriptions are managed by Apple through the App Store. We do not receive or store your payment details. The first Android release does not offer purchases.</p>
 
     <h2>Data retention</h2>
     <ul>
@@ -142,10 +148,10 @@
       <li><span class="highlight">Device tokens</span> — retained while your device is registered. Expired tokens are removed automatically.</li>
       <li><span class="highlight">Analytics</span> — TelemetryDeck retains anonymised signals for up to 90 days.</li>
       <li><span class="highlight">News ranking data</span> — duplicate-prevention records are retained for up to 24 hours and aggregate story counts for up to 30 days.</li>
-      <li><span class="highlight">Crash reports</span> — Sentry retains reports for 90 days by default.</li>
+      <li><span class="highlight">Crash reports</span> — Sentry retains iOS reports for 90 days by default. Google starts removing Android Crashlytics reports and associated identifiers after 90 days, as described in its Firebase privacy information.</li>
     </ul>
 
-    <h2>Your rights</h2>
+    <h2 id="account-deletion">Your rights and account deletion</h2>
     <p>Under the Australian Privacy Principles you have the right to:</p>
     <ul>
       <li>Access the personal information we hold about you</li>
@@ -153,7 +159,7 @@
       <li>Request deletion of your account and associated data</li>
       <li>Opt out of analytics at any time by adjusting your device's privacy settings</li>
     </ul>
-    <p>To delete your account, go to <strong>Settings → Account → Delete Account</strong> in the app, or email us at <a href="mailto:scoreappau@gmail.com">scoreappau@gmail.com</a>.</p>
+    <p>To delete your account, open <strong>Settings → Account → Delete Account</strong> in the app. You can also <a href="../delete-account/">request deletion on our account-deletion page</a> without installing the app. The page explains what is deleted and how to contact us.</p>
 
     <h2>Children's privacy</h2>
     <p>Scores AU is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such data, please contact us and we will delete it promptly.</p>
